@@ -1,0 +1,259 @@
+/* Conteneur principal pour les deux sections */
+.main-container-commandes {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Conteneur pour le panier */
+.card-container-commandes {
+  width: 80%;
+  flex: 1; 
+  margin-right: 20px;
+}
+
+/* Conteneur pour le formulaire de paiement */
+.payment-container {
+  flex: 2;
+  display: flex;
+  margin-right: 5px;
+  justify-content: center; /* Centre le formulaire de paiement horizontalement */
+}
+
+/* Styles pour la carte */
+.card-commandes {
+  background-color: #f1f1f1;
+  border: 2px solid #0E4A65;
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%; 
+  max-height: 420px; /* Limite la hauteur de la carte */
+  overflow-x: auto; /* Ajoute le scrolling vertical */
+  overflow-y: none;
+  override-colors: #0E4A65;
+}
+
+/* Personnaliser la barre de scroll  */
+.card-commandes::-webkit-scrollbar {
+  width: 12px; /* Largeur de la barre de défilement */
+}
+
+.card-commandes::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Couleur de fond de la piste de défilement */
+}
+
+.card-commandes::-webkit-scrollbar-thumb {
+  background-color: #0E4A65; /* Couleur de la barre de défilement */
+  margin:2%;
+  padding:2;
+  border-radius: 10px; /* Ajoute des coins arrondis à la barre de défilement */
+  border: 3px solid #f1f1f1; 
+}
+
+/* Personnalisation de la barre de défilement au survol */
+.card-commandes::-webkit-scrollbar-thumb:hover {
+  background-color: #156a92; /* Change la couleur au survol si besoin */
+}
+
+/* Styles pour les éléments de la carte */
+.CardItem-commandes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  padding: 10px;
+  width: 98%; /* Ajuste la largeur des éléments de la carte à 100% du conteneur */
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+
+/* Styles pour les images et les noms des produits */
+.CardItem-commandes img {
+  width: 100px;
+  height: 90px;
+  margin-right: 30px; /* Espacement entre l'image et le nom du produit */
+}
+
+.CardItem-commandes .productName-commandes {
+  font-size: 24px;
+  line-height: 31px;
+  color: black;
+  margin-left: 20px;
+}
+
+/* Styles pour les détails du produit */
+.sizePrice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 40px;
+}
+
+.sizePrice p {
+  margin: 0;
+}
+
+.sizePrice p:nth-child(1) {
+  font-size: 15px;
+}
+
+.sizePrice p:nth-child(2) {
+  font-size: 20px;
+  line-height: 42px;
+}
+
+/* Styles pour les boutons */
+.button-container {
+  display: flex;
+  justify-content: flex-end; /* Aligne le bouton à droite */
+  padding: 10px;
+}
+
+.prixBtn-commandes {
+  color: black;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  border: 2px solid #0E4A65;
+  margin-top: 0;
+  min-width: 250px;
+  margin-right: 20%;
+  background-color: transparent;
+}
+
+.prixBtn-commandes {
+  /* Styles spécifiques pour le bouton de prix */
+  margin-right: 5%;
+}
+
+
+/* Nouveau conteneur pour le prix total */
+.total-price-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end; /* Aligne le bouton à droite */
+}
+
+.prixBtn-commandes {
+  /* Styles pour le bouton de prix total */
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Styles pour le formulaire de paiement */
+.payment-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 50%; /* Réduit la largeur du formulaire de paiement à 50% du conteneur */
+  margin-left: 300px ; /* Centre le formulaire de paiement horizontalement */
+}
+
+/* Styles pour les options de paiement */
+.payment-options {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  background-color: #AEB9C4;
+}
+
+.option {
+  background: #AEB9C4;
+  border: none;
+  cursor: pointer;
+  color: black;
+  margin-top: 0;
+}
+
+.option.selected {
+  font-weight: bold;
+}
+
+/* Styles pour les groupes de formulaire */
+.form-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  font-size: large;
+  color: #000;
+}
+
+.country {
+  height: 35px;
+  margin-left: 20px;
+}
+
+.butt-paye {
+  background-color: #0E4A65;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.butt-paye:hover {
+  background-color: #0b3d51;
+}
+
+/* Styles pour les champs de texte */
+.form-group input,
+.form-group select {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+/* Styles pour les boutons de paiement */
+.pay-button {
+  background-color: #0E4A65;
+  border: none;
+  padding: 10px;
+  width: 30%;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+  margin-left: 20%;
+}
+
+.pay-button:hover {
+  background-color: #bbb;
+}
+
+/* Styles pour les titres */
+h1 {
+  font-size: 20px;
+  line-height: 31px;
+  font-weight: 700;
+  color: #000;
+  text-decoration: underline;
+}
+
+/* Styles pour les parties de panier */
+.cartsPart {
+  max-height: 400px;
+  overflow-y: scroll;
+}
+
+/* Styles spécifiques pour les conteneurs d'articles */
+.card-container-commandes, .payment-form {
+  margin: 10px 0;
+}
+
+/* Ajustement de la carte du panier */
+.card-commandes {
+  margin-left: 10%;
+  width: 100%; /* Réduit la largeur de la carte à 50% du conteneur */
+}
+.leftSide-commandes{
+  display: flex;
+  align-items: center;
+}

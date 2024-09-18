@@ -1,0 +1,180 @@
+.container {
+    display: flex;
+    flex: 1;
+    align-items: flex-start;
+    gap: 20px;
+    min-height: 100vh;
+  }
+  .error-message{
+    color: red;
+    font-size: small;
+  }
+  
+  .inscription-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-top: 5%;
+  }
+
+  .connection-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10%;
+  }
+
+  .text-mdp{
+    font-size: 30px;
+    color: #000;
+    padding-bottom: 10px;
+  }
+
+  .input-mdp label {
+    font-size: 25px;
+    color: #000000;
+  }
+  /* Display the image when the screen size is 900px or wider */
+@media (min-width: 900px) {
+.responsive-img {
+  display: block; /* or inline, inline-block, etc., depending on your Header needs */
+}
+}
+  .inscription-section h2 {
+    font-weight: 400;
+    color: #7d4f50;
+    font-size: 48px;
+    line-height: 63px;
+    padding-bottom: 30px;
+  }
+  
+  .connection-section h2 {
+    font-weight: 400;
+    color: #000000;
+    font-size: 48px;
+    line-height: 63px;
+    padding-bottom: 30px;
+  }
+  .input-group label {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #000000;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    padding: 8px;
+    margin-bottom: 15px;
+    display: block;
+    width: 220px;
+    border: 2px solid #7d4f50;
+    border-radius: 27px;
+  }
+  
+  button {
+    padding: 10px 40px;
+    background-color: #7d4f50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 27px;
+    margin-top: 45px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+  .button-mdp{
+    padding: 10px 40px;
+    color: black;
+    border: none;
+    cursor: pointer;
+    margin-top: 45px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    background-color: transparent;
+  }
+  .text {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #000;
+    padding-bottom: 5px;
+  }
+  
+  .text strong {
+    font-weight: bold; /* Bold part of the text */
+  }
+  
+  a {
+    text-decoration: none;
+    color: #000;
+    padding-left: 5px;
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    z-index: 1001;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #d9d9d9;
+    border-radius: 28px;
+  }
+  
+  .modal-content h2 {
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 29px;
+    color: #000;
+  }
+  
+  .modal-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .modal-btn {
+    background-color: white;
+    color: black;
+    margin-top: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+  }
+  
+  .modal-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+  

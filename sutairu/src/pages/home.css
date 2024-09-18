@@ -1,0 +1,234 @@
+/* .parent {
+  max-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  width: 90%;
+  padding: 50px 0;
+} */
+
+.mainDiv {
+  height: 100vh;
+  overflow: hidden;
+}
+.parent {
+  display: flex;
+  align-items: flex-start; /* This will ensure the children start from the beginning vertically */
+  justify-content: center; /* Keep as is if you still want to center the children horizontally */
+  gap: 80px;
+  width: 90%;
+  padding-top: 50px;
+  /* padding-bottom: 0; */
+}
+
+.parent2 {
+  display: flex;
+  align-items: flex-start; /* This will ensure the children start from the beginning vertically */
+  justify-content: center; /* Keep as is if you still want to center the children horizontally */
+  gap: 80px;
+  width: 90%;
+  padding-top: 4%;
+  /* padding-bottom: 0; */
+}
+
+.parent .child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.parent2 .child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+  .img-three {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Ajoutez d'autres styles si nécessaire */
+  }
+  
+  @media (max-width: 768px) {
+    .parent {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+      align-items: center !important;
+      width: 100% !important;
+      gap: unset;
+    }
+    .parent2 {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+      align-items: center !important;
+      width: 100% !important;
+      gap : unset;
+      margin-top: 17%;
+    }
+  
+    .child,
+    .image {
+      max-width: 100% !important; /* Allow children to take full width on smaller screens */
+    }
+    .img-three{
+      align-self: center;
+    }
+    .container{
+      min-height: 32vh !important;
+      margin-bottom: 17%;
+    }
+    .customLink{
+      margin-bottom: 17%;
+    }
+  }
+  
+  /* */
+  
+  .imgTag {
+    max-width: 100%; /* Ensure image does not exceed its container's width */
+    max-height: 50vh; /* Limit image height to 50% of the viewport height */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .child,
+  .image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+  }
+  
+  /* .child {
+      flex-direction: column;
+      text-align: center;
+      font-size: 24px;
+    } */
+  
+  .child {
+    flex-direction: column;
+    text-align: center;
+    font-size: 24px;
+    align-items: flex-start; /* Align items to the start of the flex container */
+    justify-content: flex-start; /* Align content to the start vertically */
+  }
+  
+  .slogan {
+    font-weight: 400;
+    font-size: 24px;
+    width: 80%;
+    color: #000;
+  }
+  
+  .customLink {
+    padding: 10px 70px;
+    border: 2px solid #0E4A65;
+    background-color: #ffffff;
+    color: #000;
+    font-size: 16px;
+    cursor: "pointer";
+    outline: none;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 27px;
+  }
+  
+  .imgTag {
+    width: 50%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+  }
+  
+  .container {
+    display: flex;
+    position: relative;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: white;
+  }
+  
+  .division {
+    width: calc(140px * 1.3);
+    height: 130px;
+    background-color: lightgrey;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    position: relative;
+    z-index: 1;
+    border-radius: 13px;
+  }
+  
+  .division:last-child {
+    width: calc(130px * 1.3);
+    height: 130px;
+    margin-right: 0;
+    justify-content: center;
+    z-index: 5;
+  }
+  .division:first-child {
+    text-align: start;
+    background: rgba(0, 0, 0, 1, 0.5);
+  }
+  .container > .division:nth-child(2) {
+    background: rgba(0, 0, 0, 1, 0.5);
+    /* Correctly target the second child */
+    justify-content: flex-end; /* Align text to end for the second child */
+  }
+  
+  .absolute {
+    position: absolute;
+    bottom: 20px;
+    z-index: 1; /* Adjusted to ensure it's above the first two but below the last */
+    width: calc(130px * 1.3 - 40px);
+    height: calc(130px - 40px);
+    background-color: #d9d9d9; /* To distinguish it */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  /* Existing CSS */
+  /* Other styles remain unchanged */
+  
+  .container {
+    overflow: hidden;
+    position: relative;
+    width: 100%; /* Ensure the container takes the full width of its parent */
+    height: 250px; /* Adjusted to match the height of the slides */
+    display: flex; /* Use flexbox to center the slides horizontally */
+    justify-content: center; /* Center slides horizontally */
+    align-items: center; /* Center slides vertically if container's height is greater */
+  }
+  
+  .slide {
+    width: 200px; /* Set slide width as 200px */
+    height: 200px; /* Set slide height as 200px */
+    position: absolute;
+    /* top: 0; */
+    left: 100%; /* Initially place slides to the right */
+    transition: all 0.8s ease; /* Smooth transition for the slide */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    opacity: 0; /* Make non-active slides invisible */
+    visibility: hidden; /* Hide non-active slides */
+    background-color: #d9d9d9;
+    border-radius: 13px;
+  }
+  
+  .slide.active {
+    left: 50%; /* Move active slide to the center */
+    transform: translateX(
+      -50%
+    ); /* Adjust positioning to truly center the slide */
+    opacity: 1; /* Make active slide visible */
+    visibility: visible; /* Show active slide */
+  }
+
+  
+  
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Create design */

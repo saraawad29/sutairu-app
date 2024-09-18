@@ -1,0 +1,15 @@
+.container-propos {
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.text-propos {
+    margin-top: 12%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #333;
+    font-style: italic;
+    text-align: center;
+}

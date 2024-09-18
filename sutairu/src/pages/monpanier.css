@@ -1,0 +1,272 @@
+#cartContainer .CardItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* Spacing between cart items */
+}
+.CardItem {
+  /* border: solid #7d4f50; */
+  background-color: #f1f1f1;
+  border: 2px solid #0E4A65;
+}
+.boutonIconEdit{
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+.canvas-container {
+  width: 110px; /* Ajustez cette valeur selon vos besoins */
+  height: 110px; /* Ajustez cette valeur selon vos besoins */
+  position:relative; 
+}
+
+.canvas-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.boutonIcon{
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+.CardItem img {
+  width: 100px; /* Adjust as needed */
+  height: auto;
+}
+
+.CardItem .productName {
+  margin-left: 60px; /* Spacing from image */
+}
+
+.CardItem .productDetails {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  margin-left: 30px; /* Spacing from product name */
+}
+
+.CardItem .ajouterBtn {
+  font-size: 15px;
+}
+
+.CardItem .deleteIcon {
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+.CardItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 20px; /* Spacing between cart items */
+  width: 1000px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.CardItem img {
+  width: 100px;
+  height: 100px;
+  margin-right: 30px; /* Gap between 1st element (image) and 2nd element (product name) */
+}
+
+.leftSide {
+  display: flex;
+  align-items: center;
+}
+
+.rightSide {
+  display: flex;
+  align-items: center;
+}
+.detail{
+  margin-right: 40px; /* Gap between 3rd (size/price) and 4th (delete icon) elements */
+
+}
+.sizePrice2 {
+  margin-right: 40px; /* Gap between 3rd (size/price) and 4th (delete icon) elements */
+}
+
+.deleteIcon {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  gap: 50px;
+}
+
+.deleteIcon img {
+  width: 50px;
+  height: 50px;
+}
+
+p {
+  color: black;
+  font-weight: 400;
+}
+.productName {
+  font-size: 24px;
+  line-height: 31px;
+}
+.sizePrice :nth-child(1) {
+  font-size: 15px;
+}
+
+.sizePrice :nth-child(2) {
+  font-size: 20px;
+  line-height: 42px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+.articles {
+  width: 100%;
+  flex: 1;
+  padding-left: 5%;
+}
+
+.articles :nth-child(1) {
+  min-width: 100px;
+}
+
+.payment-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin-top: 3%;
+  margin-right: 5%;
+}
+
+.payment-options {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  background-color: #AEB9C4;
+}
+
+.option {
+  background: #AEB9C4;
+  border: none;
+  cursor: pointer;
+  color: black;
+  margin-top: 0;
+}
+
+.option.selected {
+  font-weight: bold;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.country{
+  height: 35px;
+  margin-left: 20px;
+}
+
+.butt-paye {
+  background-color: #0E4A65;
+}
+.card-text {
+  text-align: left;
+  color: #000000;
+  font-size: large;
+}
+.placeholder {
+  margin-left: 20px;
+}
+.form-group input,
+.form-group select {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 0;
+}
+
+.pay-button {
+  background-color: #0E4A65;
+  border: none;
+  padding: 10px;
+  width: 30%;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+  margin-left: 20%;
+}
+
+.pay-button:hover {
+  background-color: #bbb;
+}
+
+h1 {
+  font-size: 20px;
+  line-height: 31px;
+  font-weight: 700;
+  color: #000000;
+  text-decoration: underline;
+}
+
+.ajouterBtn {
+  background-color: transparent;
+  color: black;
+  margin-top: 0;
+  padding-right: 60px;
+}
+
+.voir-le-panier {
+  margin-right: 15%;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end; /* Aligns the button to the right */
+  padding: 10px; /* Add padding as needed */
+}
+
+.prixBtn {
+  color: black;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  border: 2px solid #0E4A65;
+  margin-top: 0;
+  min-width: 250px;
+  margin-right: 20%;
+}
+
+.commanderBtn {
+  color: black;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  border: 2px solid #0E4A65;
+  margin-top: 0;
+  min-width: 250px;
+  margin-right: 20%;
+}
+
+.cartsPart {
+  max-height: 400px;
+  overflow-y: scroll;
+}
+
+.card {
+  margin-top: 2%;
+}
