@@ -21,8 +21,6 @@ function HomePage() {
 
   return (
     <div className="mainDiv">
-            <div>Backend base url is {process.env.REACT_APP_BACKEND_URL ? process.env.REACT_APP_BACKEND_URL : 'url non accessible' }</div>
-
       {/* First part */}
       <div className="parent">
         <div className="child">

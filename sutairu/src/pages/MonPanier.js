@@ -25,7 +25,8 @@ function MonPanier() {
 
   const handleDelete = async (articleId) => {
     try {
-      const response = await axios.delete(`http://localhost:5000/panier/lulu@test.com/${articleId}`);
+      const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
+      const response = await axios.delete(`${backendUrl}/panier/lulu@test.com/${articleId}`);
       alert("Article supprimé avec succès");
       window.location.reload();
     } catch (error) {

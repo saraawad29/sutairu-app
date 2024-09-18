@@ -45,8 +45,9 @@ export const CheckoutForm= ({ amount })=>{
         if(!error){
             console.log("token ok:", paymentMethod);
             try{
+                const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
                 const {id} = paymentMethod;
-                const response = await axios.post("http://localhost:5000/stripe/charge",
+                const response = await axios.post(`${backendUrl}/stripe/charge`,
                 {
                     amount: Math.round(amount * 100),
                     id: id,

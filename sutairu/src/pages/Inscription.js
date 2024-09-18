@@ -15,7 +15,8 @@ function Inscription2() {
   const handleOnSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/inscription', values, {
+      const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
+      const response = await axios.post(`${backendUrl}/inscription`, values, {
         headers: {
           'Content-Type': 'application/json',
         }
