@@ -10,7 +10,8 @@ function MesDesigns() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://localhost:5000/article')
+    const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
+    axios.get(`${backendUrl}/article`)
       .then(response => {
         setArticles(response.data);
       })
