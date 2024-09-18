@@ -8,8 +8,9 @@ import deleteSvg from "../icons/deleteSvg.svg";
 const CardItem = ({ item, ajouterAuPanier }) => {
   const handleDelete = async () => {
     try {
-      const response = await axios.delete(`http://localhost:5000/article/${item.id}`);
-      alert("Article supprimé avec succès");
+      const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
+      const response = await axios.delete(`${backendUrl}/article/${item.id}`);
+          alert("Article supprimé avec succès");
       window.location.reload();
     } catch (error) {
       alert('Erreur lors de la suppression de l\'article');
