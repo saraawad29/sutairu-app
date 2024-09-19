@@ -13,7 +13,7 @@ function MonPanier() {
     const fetchPanier = async () => {
       try {
         const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
-        const response = await axios.get(`${backendUrl}/panier`);
+        const response = await axios.get(`${backendUrl}/panier/lulu@test.com`);
         setPanier(response.data.articles);
       } catch (error) {
         console.error('Erreur lors de la récupération du panier :', error);
