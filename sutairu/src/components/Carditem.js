@@ -19,21 +19,15 @@ const CardItem = ({ item, ajouterAuPanier }) => {
 
   const handleAddToCart = async () => {
     try {
-      const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
-      const response = await axios.post(`${backendUrl}/panier`,  {
+      //const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
+      const response = await axios.post('http://localhost:5000/panier',  {
         user: "lulu@test.com", // Remplacer par l'utilisateur actuel
         articleId: item.id,
         quantite: 1
       });
-    // Vérifier la réponse pour s'assurer que l'article a été ajouté avec succès
-    if (response.status === 200 || response.data.success) {
-      alert('Article ajouté au panier avec succès');
-    } else {
-      alert('Échec de l\'ajout de l\'article au panier');
-    }
-  } catch (error) {
-    console.error('Erreur lors de l\'ajout de l\'article au panier :', error);
-    alert('Erreur lors de l\'ajout de l\'article au panier');
+      alert('Article ajouté au panier');
+    } catch (error) {
+      alert('Erreur lors de l\'ajout de l\'article au panier');
   }
 };
 
