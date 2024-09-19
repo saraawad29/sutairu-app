@@ -19,7 +19,8 @@ const CardItem = ({ item, ajouterAuPanier }) => {
 
   const handleAddToCart = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/panier', {
+      const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
+      const response = await axios.post(`${backendUrl}/panier`, {
         user: "lulu@test.com", // Remplacer par l'utilisateur actuel
         articleId: item.id,
         quantite: 1

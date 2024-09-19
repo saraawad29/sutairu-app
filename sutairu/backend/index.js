@@ -77,7 +77,7 @@ app.use(function(req, res, next) {
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-//app.options('*', cors()); // Gère les pré-requêtes (OPTIONS) pour toutes les routes
+app.options('*', cors()); // Gère les pré-requêtes (OPTIONS) pour toutes les routes
 
 async function connectToDatabase() {
     try {
