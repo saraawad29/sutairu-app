@@ -27,12 +27,19 @@ function MonPanier() {
     try {
       const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
       const response = await axios.delete(`${backendUrl}/panier/lulu@test.com/${articleId}`);
+    // Vérifier la réponse du serveur avant d'afficher le message de succès
+    if (response.status === 200 || response.data.success) {
       alert("Article supprimé avec succès");
-      window.location.reload();
-    } catch (error) {
-      alert('Erreur lors de la suppression de l\'article');
+      window.location.reload(); // Recharger la page après la suppression
+    } else {
+      // Si la réponse n'est pas celle attendue, afficher une alerte d'erreur
+      alert('La suppression de l\'article a échoué');
     }
-  };
+  } catch (error) {
+    console.error("Erreur lors de la suppression de l'article :", error);
+    alert('Erreur lors de la suppression de l\'article');
+  }
+};
 
   const commander = () => {
     navigate('/commandes');

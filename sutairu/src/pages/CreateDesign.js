@@ -18,8 +18,8 @@ export default function CreateDesign() {
 
   const handleSave = async () => {
     try {
-      //const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
-      const response = await axios.post('http://localhost:5000/article', {
+      const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
+      const response = await axios.post(`${backendUrl}/article`, {
         email: "lulu@test.com", 
         hoodie: selectedChoix,
         taille: selectedSize,
