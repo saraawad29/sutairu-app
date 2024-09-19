@@ -54,30 +54,30 @@ const app = express();
 const uri = "mongodb+srv://UserDB:RUV0xqiwSQjnEX9o@sutairu.dabgfok.mongodb.net/Sutairu?retryWrites=true&w=majority";
 const stripe = Stripe(process.env.STRIPE_SECRET_TEST);
 
-app.use(cors({
-  origin: ['https://sutairu-app.vercel.app', 'http://localhost:3000'],
-  methods: ['POST', 'GET', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true
-}));
+// app.use(cors({
+//   origin: ['https://sutairu-app.vercel.app', 'http://localhost:3000'],
+//   methods: ['POST', 'GET', 'PUT', 'DELETE', 'OPTIONS'],
+//   allowedHeaders: ['Content-Type', 'Authorization'],
+//   credentials: true
+// }));
 
-// app.use(function(req, res, next) {
-//     // res.header("Access-Control-Allow-Origin", "*");
-//     const allowedOrigins = ['http://localhost:3000','https://sutairu-app.vercel.app'];
-//     const origin = req.headers.origin;
-//     if (allowedOrigins.includes(origin)) {
-//          res.setHeader('Access-Control-Allow-Origin', origin);
-//     }
-//     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
-//     res.header("Access-Control-Allow-credentials", true);
-//     res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, UPDATE");
-//     next();
-//   });
+app.use(function(req, res, next) {
+    // res.header("Access-Control-Allow-Origin", "*");
+    const allowedOrigins = ['http://localhost:3000','https://sutairu-app.vercel.app'];
+    const origin = req.headers.origin;
+    if (allowedOrigins.includes(origin)) {
+         res.setHeader('Access-Control-Allow-Origin', origin);
+    }
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+    res.header("Access-Control-Allow-credentials", true);
+    res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, UPDATE");
+    next();
+  });
 
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.options('*', cors()); // Gère les pré-requêtes (OPTIONS) pour toutes les routes
+//app.options('*', cors()); // Gère les pré-requêtes (OPTIONS) pour toutes les routes
 
 async function connectToDatabase() {
     try {
