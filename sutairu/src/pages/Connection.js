@@ -14,9 +14,9 @@ function Connection() {
     event.preventDefault();
     setErrorMessage(""); // Réinitialiser le message d'erreur avant la tentative de connexion
     try {
-      const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
+      //const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
 
-      const response = await axios.post(`${backendUrl}/connexion`, {
+      const response = await axios.post("http://localhost:5000/connexion", {
         email,
         password,
       });
