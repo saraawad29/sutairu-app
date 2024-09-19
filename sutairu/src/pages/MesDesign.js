@@ -11,24 +11,24 @@ function MesDesigns() {
 
   useEffect(() => {
     const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
-    axios.get(`${backendUrl}/article`)
-      .then(response => {
-        setArticles(response.data);
-      })
-      .catch(error => {
-        console.error('Erreur lors de la récupération des articles :', error);
-      });
-  //   const fetchArticles = async () => {
-  //     const res = await fetch(`${backendUrl}/article`, {
-  //       method: 'GET',
-  //       headers: {
-  //         'Content-Type': 'application/json',
-  //     }});
-  //     const data = await res.json();
-  //     setArticles(data);
+    // axios.get(`${backendUrl}/article`)
+    //   .then(response => {
+    //     setArticles(response.data);
+    //   })
+    //   .catch(error => {
+    //     console.error('Erreur lors de la récupération des articles :', error);
+    //   });
+    const fetchArticles = async () => {
+      const res = await fetch(`${backendUrl}/article`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+      }});
+      const data = await res.json();
+      setArticles(data);
 
-  //   }
-  //   fetchArticles();
+    }
+    fetchArticles();
   }, []);
 
   const ajouterAuPanier = (article) => {

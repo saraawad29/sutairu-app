@@ -53,8 +53,6 @@ dotenv.config();
 const app = express();
 const uri = "mongodb+srv://UserDB:RUV0xqiwSQjnEX9o@sutairu.dabgfok.mongodb.net/Sutairu?retryWrites=true&w=majority";
 const stripe = Stripe(process.env.STRIPE_SECRET_TEST);
-const cors = require('cors');
-const bodyParser = require('body-parser');
 
 app.use(cors({
   origin: ['https://sutairu-app.vercel.app', 'http://localhost:3000'],
@@ -62,6 +60,7 @@ app.use(cors({
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
 }));
+
 
 // app.use(function(req, res, next) {
 //     // res.header("Access-Control-Allow-Origin", "*");
@@ -76,10 +75,11 @@ app.use(cors({
 //     next();
 //   });
 
+
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.options('*', cors()); // Gère les pré-requêtes (OPTIONS) pour toutes les routes
+app.options('*', cors());
 
 async function connectToDatabase() {
     try {
