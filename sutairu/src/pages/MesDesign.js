@@ -29,7 +29,7 @@ function MesDesigns() {
 
   //   }
   //   fetchArticles();
-  // }, []);
+  }, []);
 
   const ajouterAuPanier = (article) => {
     setPanier([...panier, article]);
