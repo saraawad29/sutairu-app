@@ -14,6 +14,7 @@ import Commandes from "./pages/MesCommandes";
 import Propos from "./pages/Propos";
 import { PanierProvider } from "./pages/PanierProvider";
 import ForgetMdpPage from "./pages/foregtmdp";
+import EditDesign from "./pages/EditDesign";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/changement-mot-de-passe" element={<ForgetMdpPage />} />
           <Route path="/creerdesign" element={<CreateDesign />} />
           <Route path="/designs" element={<Designs />} />
+          <Route path="/edit-design/:id" element={<EditDesign />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/colis" element={<Colis />} />
           <Route path="/panier" element={<Panier />} />

@@ -4,8 +4,10 @@ import edit from "../icons/edit.svg";
 import axios from 'axios';
 import ThreeArticle from "../components/ThreeArticle";
 import deleteSvg from "../icons/deleteSvg.svg";
+import { useNavigate } from 'react-router-dom';
 
 const CardItem = ({ item, ajouterAuPanier }) => {
+  const navigate = useNavigate();  // Utilisation de useNavigate pour initialiser navigate
   const handleDelete = async () => {
     try {
       const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
@@ -15,6 +17,10 @@ const CardItem = ({ item, ajouterAuPanier }) => {
     } catch (error) {
       alert('Erreur lors de la suppression de l\'article');
     }
+  };
+
+  const handleEdit = () => {
+    navigate(`/edit-design/${item.id}`);  // Utilisation correcte de navigate ici
   };
 
   const handleAddToCart = async () => {
@@ -48,7 +54,7 @@ const CardItem = ({ item, ajouterAuPanier }) => {
           Ajouter au panier
         </button>
         <div className="deleteIcon">
-          <button className="boutonIconEdit"><img src={edit} alt="edit icon" style={{width: "25px", height:"auto"}}/></button>
+          <button className="boutonIconEdit" onClick={handleEdit}><img src={edit} alt="edit icon" style={{width: "25px", height:"auto"}}/></button>
           <button className="boutonIcon" onClick={handleDelete}><img src={deleteSvg} alt="delete icon" style={{width: "25px", height:"auto"}}/></button>
         </div>
       </div>
