@@ -229,6 +229,13 @@
     color: #000000;
     text-decoration: underline;
   }
+  h3 {
+    margin-left: 20%;
+    margin-right: 30%;
+    font-size: 30px;
+    font-weight: 400;
+    color: #000000;
+  }
   
   .ajouterBtn {
     background-color: transparent;

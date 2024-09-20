@@ -51,6 +51,7 @@ function MonPanier() {
 
   return (
     <div className="card">
+      <h3>Mes panier</h3>
       {panier.map((item) => (
         <div key={item.article._id} className="CardItem">
           <div className="leftSide">
