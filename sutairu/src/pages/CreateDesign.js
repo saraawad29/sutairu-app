@@ -88,6 +88,21 @@ export default function CreateDesign() {
     }
   };
 
+  function handleShare() {
+    if (navigator.share) {
+      navigator.share({
+        title: 'Mon Design',
+        text: 'Découvrez mon design personnalisé !',
+        url: window.location.href,  // Vous pouvez changer l'URL selon vos besoins
+      })
+      .then(() => console.log('Partage réussi !'))
+      .catch((error) => console.log('Échec du partage', error));
+    } else {
+      // Fallback pour les navigateurs qui ne supportent pas l'API de partage
+      alert("L'option de partage n'est pas supportée sur cet appareil.");
+    }
+  }
+
   return (
     <div className="container">
       <div className="left-part">
@@ -100,7 +115,7 @@ export default function CreateDesign() {
           <button>
             <img src={swipe} alt="swipe" className="swipe-share"/>
           </button>
-          <button>
+          <button onClick={handleShare}>
             <img src={share} alt="share" className="swipe-share"/>
           </button>
         </div>
