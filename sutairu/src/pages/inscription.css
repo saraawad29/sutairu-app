@@ -35,7 +35,7 @@
   }
 
   .input-mdp label {
-    font-size: 25px;
+    font-size: 15px;
     color: #000000;
   }
   /* Display the image when the screen size is 900px or wider */
@@ -46,7 +46,7 @@
 }
   .inscription-section h2 {
     font-weight: 400;
-    color: #7d4f50;
+    color: black;
     font-size: 48px;
     line-height: 63px;
     padding-bottom: 30px;
@@ -73,13 +73,13 @@
     margin-bottom: 15px;
     display: block;
     width: 220px;
-    border: 2px solid #7d4f50;
+    border: 2px solid black;
     border-radius: 27px;
   }
   
   button {
     padding: 10px 40px;
-    background-color: #7d4f50;
+    background-color: black;
     color: white;
     border: none;
     cursor: pointer;
