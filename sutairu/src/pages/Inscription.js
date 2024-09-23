@@ -30,7 +30,7 @@ function Inscription2() {
         password:'', 
         dateOfBirth:''
       });
-      window.location.href = '/';
+      window.location.href = '/connexion';
     } catch (error) {
       console.error('Error creating user:', error);
       alert('Error creating user');
